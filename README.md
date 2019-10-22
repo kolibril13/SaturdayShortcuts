@@ -17,3 +17,21 @@ url = "firefox -new-tab 'https://www.linguee.de/deutsch-englisch/search?source=a
 output = system.exec_command(url)
 ```
 ---
+
+**#Episode02:** *
+
+```python
+import os, zipfile
+import subprocess
+dir_name = '/home/jan-hendrik/Downloads/'
+extension = ".zip"
+os.chdir(dir_name) # change directory from working dir to dir with files
+for item in os.listdir(dir_name): # loop through items in dir
+    if item.endswith(extension): # check for ".zip" extension
+        file_name = os.path.abspath(item) # get full path of files
+        zip_ref = zipfile.ZipFile(file_name) # create zipfile object
+        zip_ref.extractall(dir_name + item[:-4]) # extract file to dir
+        zip_ref.close() # close file
+        os.remove(file_name) # delete zipped file
+        subprocess.Popen(['xdg-open', dir_name + item[:-4] + '/']) #open folder
+```
