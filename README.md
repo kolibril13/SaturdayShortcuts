@@ -8,6 +8,12 @@ An installation guide for Autokey is [here.](https://github.com/autokey/autokey/
 2. Copy and paste the script.
 3. Define your prefered key, which will trigger the script.
 
+
+# Click here to open the channel:
+[![IMAGE ALT TEXT HERE](https://www.youtube.com/channel/UCSIoiszi1R4sgS9CEme7R8A
+]
+https://www.youtube.com/channel/UCSIoiszi1R4sgS9CEme7R8A
+
 ---
 **#Episode01:** *Translate selected text into another language*
 
@@ -18,7 +24,7 @@ output = system.exec_command(url)
 ```
 ---
 
-**#Episode02:** *
+**#Episode02:** *Automatic unpacking zip files in the Download folder*
 
 ```python
 import os, zipfile
