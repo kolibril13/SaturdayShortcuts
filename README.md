@@ -39,3 +39,23 @@ for item in os.listdir(dir_name): # loop through items in dir
         os.remove(file_name) # delete zipped file
         subprocess.Popen(['xdg-open', dir_name + item[:-4] + '/']) #open folder
 ```
+**#Episode03:** *Automation of screenshots*
+
+```python
+working_directory= "~/Downloads/"
+time.sleep(0.1) # without this, the command does not work 
+
+command = "gnome-screenshot -a  -f '/tmp/temp.png' "
+output = system.exec_command(command)
+
+name = dialog.input_dialog(title='Enter a value', message='Enter a value', default='').data
+
+
+from_path = '/tmp/temp.png'
+to_path   = working_directory + name + '.png'
+
+command2 = "mv " + from_path + " " + to_path 
+
+system.exec_command(command2)
+dialog.info_dialog( title='Information', message='Screenshot moved to ' + to_path  )
+```
