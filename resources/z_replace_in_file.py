@@ -9,5 +9,4 @@ def replaceAll(file,searchExp,replaceExp):
 
 
 
-datum = system.exec_command("date +%d.%m.%Y")
-replaceAll("/home/jan-hendrik/Desktop/test.txt","DATUM",datum)
+replaceAll("/home/jan-hendrik/Desktop/test.txt","DATUM",123)
